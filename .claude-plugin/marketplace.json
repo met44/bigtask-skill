@@ -1,0 +1,18 @@
+{
+  "name": "met44-skills",
+  "description": "met44's Claude Code skills marketplace",
+  "owner": {
+    "name": "met44"
+  },
+  "plugins": [
+    {
+      "name": "bigtask",
+      "description": "Persistent plan/state/progress harness for non-trivial multi-session tasks (feature, refactor, audit, migration). VCS-agnostic (git/Perforce/none), human-gated submit, survives context loss across sessions.",
+      "version": "1.0.0",
+      "source": "./",
+      "author": {
+        "name": "met44"
+      }
+    }
+  ]
+}

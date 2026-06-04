@@ -1,0 +1,17 @@
+{
+  "slug": "<slug>",
+  "goal": "<one-line goal>",
+  "vcs": "git",
+  "unit_of_work": "task/<slug>",
+  "changelist": null,
+  "phase": "<first_phase>",
+  "step": "pending",
+  "last_green_step": null,
+  "blockers": [],
+  "long_jobs": [],
+  "tooling": {
+    "vcs": "git",
+    "build": "unreal",
+    "notify": "none"
+  }
+}
