@@ -24,6 +24,8 @@ Violating the letter of these rules is violating their spirit.
 
 **What you MAY do yourself:** maintain the ledger; read agent reports; view agent-produced *artifacts* (renders, audit PNGs, result tables) at decision points — artifacts depict *results* (geometry, pass/fail, metrics), never transcribe *source* (code bodies, config values, diffs, graph/pin contents); commissioning a content-bearing artifact is commissioning a read, and iteration loops over artifacts belong to the worker; run short bounded state checks that return lists, not content (`p4 opened`, listing an output directory).
 
+**Model tiering.** Run each agent on the cheapest model that can do its job: recon/Explore → Haiku; workers that write/edit/build → Sonnet; keep yourself (the supervisor) on the strong model. Quality and cross-system consistency come from the **contracts and your review**, not from the worker's model — a well-specified Sonnet worker matches a stronger model on a bounded task. Two guardrails make this hold: (1) **escalate** a worker to the strong model only when the *task itself* needs deep reasoning (novel algorithm, subtle math/concurrency, a large ambiguous surface) — instruction can't transfer reasoning the worker's model lacks, so don't fight it, escalate; (2) if a worker **drifts** in naming or style, the contract was too vague — tighten it, don't just upgrade the model. End every worker prompt with "match the surrounding code's conventions and naming."
+
 ## Workflow
 
 1. **Intake.** Take the user's broad goal with all their details — detail in the prompt is cheap; detail pulled from reading code is what blows the context. Ask only blocking questions; for borderline ones, state your assumption and proceed.
