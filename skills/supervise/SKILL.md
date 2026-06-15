@@ -1,7 +1,8 @@
 ---
 name: supervise
-user_invocable: true
-description: "Use when given a big, broad, multi-part task (a whole feature or system — 'build the whole thing') or when a session risks context bloat from reading lots of source. The session becomes a pure supervisor that farms every subtask out to subagents. Usage: /supervise <broad goal — include ALL the details you have>"
+description: "Use when given a big, broad, multi-part task (a whole feature or system — 'build the whole thing'), or when a session risks context bloat from reading lots of source. The lead session becomes a pure supervisor that farms every subtask out to sub-agents and keeps only plans, contracts, and status. Provide the full broad goal with ALL details up front."
+user-invocable: true
+disable-model-invocation: false
 ---
 
 # Supervise

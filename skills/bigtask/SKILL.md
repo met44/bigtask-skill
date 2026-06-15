@@ -1,6 +1,8 @@
 ---
 name: bigtask
-description: Use when starting or resuming a non-trivial multi-session task (feature, refactor, audit, migration) that must survive across sessions without losing context. Triggers - "big task", multi-phase work, a task folder under .windsurf/plans/ or .plans/, resuming prior work, VCS-agnostic (git / Perforce / none) long-running work gated by a human submit.
+description: "Use when starting or resuming a non-trivial multi-session task (feature, refactor, audit, migration) that must survive across sessions without losing context. Triggers: 'big task', multi-phase work, a task folder under .windsurf/plans/ or .plans/, resuming prior work, long-running VCS-agnostic (git / Perforce / none) work gated by a human submit."
+user-invocable: true
+disable-model-invocation: false
 ---
 
 # Bigtask -- Persistent Plan / State / Progress
