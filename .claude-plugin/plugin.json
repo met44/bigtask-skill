@@ -1,7 +1,7 @@
 {
   "name": "bigtask",
-  "description": "Persistent plan/state/progress harness for non-trivial multi-session tasks (feature, refactor, audit, migration). VCS-agnostic (git/Perforce/none), human-gated submit, survives context loss across sessions.",
-  "version": "1.0.0",
+  "description": "Persistent plan/state/progress harness for non-trivial multi-session tasks (feature, refactor, audit, migration). VCS-agnostic (git/Perforce/none), human-gated submit, survives context loss across sessions. Bundles a supervise skill that keeps the lead agent's context lean by delegating each step to a sub-agent.",
+  "version": "1.1.0",
   "author": {
     "name": "met44"
   },
@@ -17,6 +17,9 @@
     "audit",
     "unreal",
     "dotnet",
-    "perforce"
+    "perforce",
+    "supervisor",
+    "orchestration",
+    "subagents"
   ]
 }

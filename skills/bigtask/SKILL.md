@@ -11,6 +11,8 @@ Run a long multi-session task so any future session resumes without losing conte
 
 **Core principle:** state lives on disk, not in context. Every checkpoint writes to disk; every invocation rebuilds context from disk.
 
+**Run as supervisor by default (top agent only).** When you are the lead session driving this task -- not a sub-agent dispatched to execute one step -- invoke the `supervise` skill (`bigtask:supervise`, bundled in this plugin) and stay an orchestrator. The Resume + Phase Loop below still governs *what* happens and in what order; supervise changes only *how* each step runs: dispatch its reading, editing, and building to one sub-agent per step, while your own context holds nothing but `STATE.json`, the contracts, and the loop. bigtask keeps state across sessions; supervise keeps it lean within one -- together they let a task outlive both context limits and session boundaries. Opt out for a small, single-phase task by noting `supervise: off` in `PLAN.md`.
+
 ## The State Triad (the one idea that matters)
 
 | File | Answers ONLY | Shape |
